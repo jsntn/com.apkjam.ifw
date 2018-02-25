@@ -1,0 +1,11 @@
+<rules>
+<service block="true" log="false">{% for i in site.data.[page.dataFile] %}
+<component-filter name="{{ page.dataFile }}/{{ i.name }}" />{% endfor %}
+</service>
+<broadcast block="true" log="false">{% for i in site.data.[page.dataFile] %}
+<component-filter name="{{ page.dataFile }}/{{ i.name }}" />{% endfor %}
+</broadcast>
+<activity block="true" log="false">{% for i in site.data.[page.dataFile] %}
+<component-filter name="{{ page.dataFile }}/{{ i.name }}" />{% endfor %}
+</activity>
+</rules>
