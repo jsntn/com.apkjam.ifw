@@ -6,7 +6,10 @@
 <body>
 <h2>{{ page.title }}</h2>
 <p>{{ page.date | date_to_string }}</p>
+<hr />
+应用版本：{{ page.version }}
 {{ content }}
+<p>禁用组件：</p>
 <div class="disabled-components"><blockquote>{% for i in site.data.[page.dataFile] %}{{ i.name }}{% if i.intro != null and i.intro != empty and i.intro != "" %}: {{i.intro}}{% endif %}<br />{% endfor %}</blockquote></div>
 IFW xml: <a href="xml/{{ page.packageName }}.xml">{{ page.packageName }}.xml</a>
 </body>
